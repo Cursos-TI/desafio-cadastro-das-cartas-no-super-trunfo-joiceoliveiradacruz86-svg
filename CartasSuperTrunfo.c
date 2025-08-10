@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main(){
     // Variavies da carta 1
     char estado;
