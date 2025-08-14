@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 int main(){
     // Variavies da carta 1
@@ -23,7 +25,7 @@ int main(){
     float densidadePopulacional2;
     float pibperCapita2;
     float superpoder2;
-    // Solicita para o usuario as informações da carta 1
+        // Solicita para o usuario as informações da carta 1
     
     printf("Digite os dados da Carta 1: \n");
 
@@ -33,8 +35,10 @@ int main(){
     printf("Código: ");
     scanf("%3s", &codigoDaCarta);
 
+    getchar();
+
     printf("Nome da Cidade: ");
-    scanf("%19s", &nomeDaCidade);
+    fgets(nomeDaCidade, sizeof(nomeDaCidade), stdin);
 
     printf("População: ");
     scanf("%lu", &populacao);
@@ -64,8 +68,10 @@ int main(){
     printf("Código: ");
     scanf("%3s", &codigoDaCarta2);
 
+    getchar();
+
     printf("Nome da Cidade: ");
-    scanf("%19s", &nomeDaCidade2);
+    fgets(nomeDaCidade2, sizeof(nomeDaCidade2), stdin);
 
     printf("População: ");
     scanf("%lu", &populacao2);
@@ -92,7 +98,7 @@ int main(){
     printf("Carta 1: \n");
     printf("Estado: %c\n", estado);
     printf("Código: %.3s\n", codigoDaCarta);
-    printf("Nome da Cidade: %19s\n", nomeDaCidade);
+    printf("Nome da Cidade: %s", nomeDaCidade);
     printf("População: %lu\n", populacao);
     printf("Área: %.2f Km²\n", area);
     printf("PIB: %.2f bilhões de reais\n", pib);
@@ -103,12 +109,12 @@ int main(){
     printf("\n\nCarta 2: \n");
     printf("Estado: %c\n", estado2);
     printf("Código: %.3s\n", codigoDaCarta2);
-    printf("Nome da Cidade: %19s\n", nomeDaCidade2);
+    printf("Nome da Cidade: %s", nomeDaCidade2);
     printf("População: %lu\n", populacao2);
     printf("Área: %.2f Km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turisticos: %d\n", numeroDePontosTuristicos2);
-    printf("Densidade Populacional: %.3f hab/km²\n", densidadePopulacional2);
+    printf("Densidade Populacional: %.3f hab/Km²\n", densidadePopulacional2);
     printf("PIB per Capita: %.3f reais\n", pibperCapita2);
 
 
